@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css"
+      integrity="sha512-JP5RU8eIRn5d5G84RhZc+QZx8SVIFBbzpyvV7aeFFgGyfV8/RzJqH2V7D+6mwZI6dWUoRZvOyB/Az0deGiGPKw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+      integrity="sha512-8gT9eYjS97zsxo2msBw16DdvtCkAb4j4tsYZcyoexxGCrhSP9Xr5r5+cL6aWwKlODJI+5mJ0aQZiOjOx8dtAKg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="../css/Cadastro.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <form method="POST" action="cadastro.php">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <h1 class="text-center mb-3">Cadastro</h1>
+
+            <!-- Campo Nome -->
+            <div class="form-floating mb-3">
+              <label for="nome">Nome</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nome"
+                name="nome"
+                placeholder="Fulano da silva"
+              />
+            </div>
+
+            <!-- Campo Telefone -->
+            <div class="form-floating mb-3">
+              <label for="telefone">Telefone</label>
+              <input
+                type="text"
+                class="form-control"
+                id="telefone"
+                name="telefone"
+                placeholder="(00) 00000-0000"
+                pattern="[0-9]{10,11}"
+                required
+              />
+            </div>
+
+            <!-- Campo E-mail -->
+            <div class="form-floating mb-3">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="exemplo@email.com"
+              />
+            </div>
+
+            <!-- Campo Senha -->
+            <div class="form-floating mb-3">
+              <label for="senha">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="senha"
+                name="senha"
+                placeholder="********"
+              />
+            </div>
+
+            <!-- Botão de Cadastro -->
+            <div class="d-grid">
+              <button class="btn btn-primary" type="submit">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

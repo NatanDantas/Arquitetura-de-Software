@@ -1,0 +1,58 @@
+/* Define as cores utilizadas na página */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo do formulário */
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Estilo dos campos do formulário */
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Estilo das labels dos campos */
+  form label {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Estilo do botão de envio do formulário */
+  form button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Estilo do botão de envio do formulário ao passar o mouse */
+  form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Estilo da mensagem de erro */
+  form .error {
+    color: #f00;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
