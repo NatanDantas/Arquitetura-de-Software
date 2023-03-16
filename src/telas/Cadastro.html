@@ -17,7 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <link rel="stylesheet" href="../css/Cadastro.css" />
+    <link rel="stylesheet" href="../css/Cadastro.css"/>
     <title>Cadastro</title>
   </head>
   <body>
@@ -39,19 +39,19 @@
               />
             </div>
 
-            <!-- Campo Telefone -->
+            <!-- Campo CPF -->
             <div class="form-floating mb-3">
-              <label for="telefone">Telefone</label>
-              <input
-                type="text"
-                class="form-control"
-                id="telefone"
-                name="telefone"
-                placeholder="(00) 00000-0000"
-                pattern="[0-9]{10,11}"
-                required
-              />
-            </div>
+                <label for="cpf">CPF</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="000.000.000-00"
+                  pattern="[0-9]{10,11}"
+                  required
+                />
+              </div>
 
             <!-- Campo E-mail -->
             <div class="form-floating mb-3">
@@ -76,6 +76,13 @@
                 placeholder="********"
               />
             </div>
+
+            <!-- Campo Grupo -->
+            <select class="form-select" aria-label="Seleçao de grupo">
+                <option selected>Selecione seu Grupo</option>
+                <option value="1">Admin</option>
+                <option value="2">Estoquista</option>
+              </select>
 
             <!-- Botão de Cadastro -->
             <div class="d-grid">

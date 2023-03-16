@@ -29,7 +29,7 @@ body {
   }
   
   /* Estilo do botão de envio do formulário */
-  form input[type="submit"] {
+  button {
     background-color: #4CAF50;
     color: #fff;
     border: none;
@@ -49,4 +49,38 @@ body {
   a:hover {
     color: #333;
   }
+
+  /*Estilo para o select*/
+
+  select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  select:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #3e8e41;
+  }
+  
+  select option:first-of-type {
+    color: #999;
+  }
+  
+  select option {
+    color: #333;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
   
