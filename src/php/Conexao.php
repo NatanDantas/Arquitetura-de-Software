@@ -1,7 +1,7 @@
 <?php
 
 $hostname = "localhost";
-$bancodedados = "";
+$bancodedados = "killjoy";
 $usuario = "root";
 $senha = "";
 //conecta com o banco

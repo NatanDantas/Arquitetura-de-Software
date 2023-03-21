@@ -2,15 +2,15 @@
 session_start();
 include('conexao.php');
 
-if(empty($_POST['usuario']) || empty($_POST['senha'])) {
-	header('Location: Login.html');
+if(empty($_POST['email']) || empty($_POST['senha'])) {
+	header('Location: ../telas/Login.html');
 	exit();
 }
 
-$usuario = mysqli_real_escape_string($mysqli, $_POST['usuario']);
+$email = mysqli_real_escape_string($mysqli, $_POST['email']);
 $senha = mysqli_real_escape_string($mysqli, $_POST['senha']);
 
-$query = "select id_usuario,nmUsuario from usuario where login = '{$usuario}' and senha = md5('{$senha}')";
+$query = "select id_usuario,nmUsuario,permissao from usuario where email = '{$email}' and senha = md5('{$senha}')";
 
 
 $result = $mysqli->query($query) or die($mysqli->error);
@@ -20,7 +20,10 @@ $row = $result->num_rows;
 if($row == 1) {
 	 $usuario = mysqli_fetch_assoc($result);
 	 $_SESSION['id_usuario'] = $usuario['id_usuario'];
-	 header('Location: Home.php');
+	 if($usuario['permissao']=="Admin")
+		 header('Location: ../telas/HomeAdmin.html');
+	if($usuario['permissao'] == "Padrao")
+	 	header('Location: ../telas/Home.html');
 	 exit();
 } else {
 	$_SESSION['nao_autenticado'] = true;

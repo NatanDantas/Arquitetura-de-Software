@@ -20,7 +20,7 @@
     <title>Cadastro</title>
   </head>
   <body>
-    <form method="POST" action="cadastro.php">
+    <form method="POST" action="../php/Cadastro.php">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6 col-lg-4">
@@ -85,25 +85,21 @@
                 name="Senha"
                 placeholder="********"
               />
-              <input type="checkbox" id="mostrarSenhaCheckbox" />Mostrar Senha
             </div>
-
-            <!-- Campo Grupo -->
-            <div class="form-floating mb-3">
-              <select
-                class="form-select"
-                id="Grupos"
-                aria-label="Seleçao de grupo"
-              >
-                <br /><br />
-                <option selected>Selecione seu Grupo</option>
-                <option value="1">Admin</option>
-                <option value="2">Estoquista</option>
-              </select>
-            </div>
+             <!-- Campo Senha -->
+             <label for="Senha">Confirmar Senha</label>
+             <div class="form-floating mb-3">
+               <input
+                 type="password"
+                 class="form-control"
+                 id="Senha"
+                 name="ConfirmarSenha"
+                 placeholder="********"
+               />
+             </div>
             <!-- Botão de Cadastro -->
             <div class="d-grid">
-              <button class="btn btn-primary" type="submit">Cadastrar</button>
+              <button class="btn btn-primary" type="submit" action="Cadastro.php">Cadastrar</button>
             </div>
           </div>
         </div>
