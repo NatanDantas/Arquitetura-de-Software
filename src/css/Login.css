@@ -1,17 +1,17 @@
 /* Define as cores utilizadas na página */
 body {
-    background-color: #f2f2f2;
+    background-color: #268080;
     font-family: Arial, sans-serif;
+    color: #fff;
   }
   
   /* Estilo do formulário */
   form {
-    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     width: 400px;
     margin: 0 auto;
+    
   }
   
   /* Estilo dos campos do formulário */
@@ -34,14 +34,14 @@ body {
   
   /* Estilo do botão de envio do formulário */
   form button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #000000;
     color: #fff;
     border: none;
-    border-radius: 3px;
-    padding: 10px;
+    border-radius: 25px;
     font-size: 16px;
     cursor: pointer;
-    width: 100%;
+    width: 20%;
+    margin: 20px;
   }
   
   /* Estilo do botão de envio do formulário ao passar o mouse */
@@ -56,3 +56,9 @@ body {
     margin-top: 5px;
   }
   
+  /* estilo da imagem */
+  .imagem {
+    margin-left: 33%;
+    margin-top: 100px;
+    width: 300px;
+  }
