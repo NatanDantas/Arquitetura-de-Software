@@ -13,7 +13,7 @@ $resultado = $mysqli->query($sql);
 
 if ($resultado->num_rows > 0) {
     while ($linha = $resultado->fetch_assoc()) {
-        $id = $linha['idUsuario'];
+        $id = $linha['id_usuario'];
         $nome = $linha['nmUsuario'];
         $email = $linha['email'];
         $status = $linha['statusUsuario'];
