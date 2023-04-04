@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="../css/Login.css" />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+
+    <img src="../imagens/Logo.png" class="imagem">
+    <div class="row">
+      <form
+        class="col s12"
+        style="padding-top: 50px"
+        method="POST"
+        action="../php/Login.php"
+      >
+        <div class="row">
+          <div class="input-field col s3 offset-s4 ">
+            <input id="email" type="email" class="validate" name="email" />
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s3 offset-s4">
+            <input
+              id="password"
+              type="password"
+              class="validate"
+              name="senha"
+            />
+            <label for="password">Senha</label>
+          </div>
+        </div>
+
+        <button
+          class="btn waves-effect waves-light col s3 offset-s4"
+          type="submit"
+          name="action"
+          action="Login.php"
+        >
+          Logar
+        </button>
+
+        <br />
+
+        <!-- Mudar para que aqui leve para o local de cadastro do usuário-->
+        <button
+          class="btn waves-effect waves-light col s3 offset-s4"
+          type="submit"
+          name="action"
+          action="Login.php"
+        >
+          Cadastrar
+        </button>
+      </form>
+    </div>
+  </div>
+  </body>
+</html>

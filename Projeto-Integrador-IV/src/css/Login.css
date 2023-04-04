@@ -1,0 +1,64 @@
+/* Define as cores utilizadas na página */
+body {
+    background-color: #268080;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  /* Estilo do formulário */
+  form {
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    margin: 0 auto;
+    
+  }
+  
+  /* Estilo dos campos do formulário */
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Estilo das labels dos campos */
+  form label {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Estilo do botão de envio do formulário */
+  form button[type="submit"] {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 20%;
+    margin: 20px;
+  }
+  
+  /* Estilo do botão de envio do formulário ao passar o mouse */
+  form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Estilo da mensagem de erro */
+  form .error {
+    color: #f00;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* estilo da imagem */
+  .imagem {
+    margin-left: 33%;
+    margin-top: 100px;
+    width: 300px;
+  }

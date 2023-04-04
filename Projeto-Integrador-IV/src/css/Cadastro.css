@@ -1,0 +1,87 @@
+/* Define as cores utilizadas na página */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo do formulário */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 850px;
+  margin: 0 auto;
+}
+
+/* Estilo dos campos do formulário */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"] {
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+/* Estilo do botão de envio do formulário */
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input ::placeholder {
+  color: #000000;
+}
+
+/* Estilo do link para voltar à página inicial */
+a {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #333;
+}
+
+/*Estilo para o select*/
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #3e8e41;
+}
+
+select option:first-of-type {
+  color: #999;
+}
+
+select option {
+  color: #333;
+}
+
+select::-ms-expand {
+  display: none;
+}

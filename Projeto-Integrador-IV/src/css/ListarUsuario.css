@@ -1,0 +1,58 @@
+body {
+    background-color: #2D2E47;
+    font-family: "Times New Roman", Times,  serif;
+    color: #fff;
+  }
+
+tr:hover {
+    background-color:#2F6C82;
+}
+
+thead{
+    background-color: #2F6C82;
+}
+
+  /* Header*/
+
+  /* estilo da imagem */
+  .imagem {
+    margin-left: 10%;
+    margin-top: 50px;
+    width: 200px; 
+  }
+
+  #grid{ 
+	display: grid;
+  grid-template-columns: 50% 45% 5%;
+  }
+
+  #logo{
+    margin: 20px;
+  }
+  
+  #sair{
+    color: #f00;
+    margin-top: 55%;
+  }
+
+  #dadosAdmin{
+    margin-top: 5%;
+  }
+
+  /* Estilo do botão de envio do formulário */
+  form button[type="submit"] {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    width: 15%;
+    margin: 10px;
+    margin-left: 40%;
+  }
+  
+  /* Estilo do botão de envio do formulário ao passar o mouse */
+  form button[type="submit"]:hover {
+    background-color: #2F6C82;
+  }
