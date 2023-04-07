@@ -68,7 +68,7 @@ if ($Senha !== $confirmSenha) {
 }
 
 $sql = "INSERT INTO Usuario(statusUsuario, permissao, nmUsuario, cpf, email, senha)
-        VALUES( '$Status', '$Permissao', '$nome','$Cpf','$Email', '$Senha')";
+        VALUES( '$Status', '$Permissao', '$nome','$Cpf','$Email', md5('$Senha'))";
 
 if ($mysqli->query($sql) === TRUE) {
 	$_SESSION['status_cadastro'] = true;

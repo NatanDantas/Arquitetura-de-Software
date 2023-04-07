@@ -14,14 +14,14 @@ $resultado = $mysqli->query($sql);
 if ($resultado->num_rows > 0) {
     while ($linha = $resultado->fetch_assoc()) {
         $ftCapa = $linha['ftCapa'];
-        $id = $linha['id_Produto'];
+        $id = $linha['id_produto'];
         $nome = $linha['nmProduto'];
         $descricao = $linha['descricao'];
         $preco = $linha['preco'];
         $quantidade = $linha['quantidade'];
 
         echo "<tr>";
-        echo "<td><img src= '"+ $ftCapa +"' /></td>";
+        echo "<td><img src='../php/$ftCapa' height=50px weight=50px/></td>";
         echo "<td>$nome</td>";
         echo "<td>$descricao</td>";
         echo "<td>$preco</td>";

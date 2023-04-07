@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $nome = $_SESSION['nmUsuario'];
+    $permissao = $_SESSION['permissao']
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +20,10 @@
     <img id = "logo" src="../imagens/Logo.png" class="imagem">
     </div>
     <div id = "dadosAdmin">
-    <strong  >Nome funcionario &lt;Função&gt;</strong>
+      <strong><?= $nome?> <?= $permissao?></strong>
     </div>
     <div id = "sair">
-    <strong >SAIR</strong>
+      <strong >SAIR</strong>
     </div>
   </header>
 

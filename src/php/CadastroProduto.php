@@ -6,11 +6,16 @@ $nomeProduto = mysqli_real_escape_string($mysqli, $_POST['nmProduto']);
 $descricao = mysqli_real_escape_string($mysqli, $_POST['descricao']);
 $preco = mysqli_real_escape_string($mysqli, $_POST['preco']);
 $quantidade = mysqli_real_escape_string($mysqli, $_POST['quantidade']);
-$File = mysqli_real_escape_string($mysqli, $_POST['ftCapa']);
+$File = mysqli_real_escape_string($mysqli, ($_POST['ftCapa']));
+
+echo(gettype($File));
 
 $upload = salvarFtperfil($_FILES);
 if(gettype($upload) == "string"){
 	$File = $upload;
+}else{
+	$File = false;
+	echo($upload);
 }
 
 $sql = "INSERT INTO Produto(nmProduto, descricao, preco, quantidade, ftCapa)
@@ -27,8 +32,8 @@ if ($mysqli->query($sql) === TRUE) {
 $mysqli->close();
 
 function salvarFtperfil($file){
-	$fotoDir = "../img/ftCapa/";
-	$fotoPath = $fotoDir . basename($file["ftCapa"]["name"]);
+	$fotoDir = "img/";
+	$fotoPath = $fotoDir.basename($file["ftCapa"]["name"]);
 	$fotoTmp = $file["ftCapa"]["tmp_name"];
 	if(move_uploaded_file($fotoTmp, $fotoPath)){
 		return $fotoPath;

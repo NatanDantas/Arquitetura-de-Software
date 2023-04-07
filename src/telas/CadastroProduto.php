@@ -4,7 +4,7 @@
         <title>Cadastro de Produtos</title>
     </head>
     <body>
-        <form method="post" action="../php/CadastroProduto.php">
+        <form method="post" action="../php/CadastroProduto.php"  enctype="multipart/form-data">
             <label for="nome">Nome do Produto</label>
             <div class="form-floating mb-3">
               <input
