@@ -9,7 +9,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/ListarProduto.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 </head>
 
 <body>
@@ -45,9 +44,7 @@
   </div>
  
   <div class="container">
-
-  <button class="glow-on-hover" type="button">+</button>
-
+    <button class="glow-on-hover" type="button"><a href="CadastroProduto.php">+</a></button>
     <div>
       <table>
         <thead>
@@ -60,9 +57,51 @@
           </tr>
         </thead>
         <tbody>
-          <?php include("../php/ListarProduto.php"); ?>
+         
         </tbody>
       </table>
+    </div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Usuario</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form method="post" action="../php/CadastroProduto.php"  enctype="multipart/form-data">
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Nome Produto:</label>
+                <input type="text" class="form-control" id="recipient-name" name="nmProduto">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Descricao:</label>
+                <textarea class="form-control" id="message-text" name="descricao"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Preço:</label>
+                <input type="text" class="form-control" id="recipient-name" name="preco">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Quantidade:</label>
+                <input type="text" class="form-control" id="recipient-name" name="quantidade">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Foto de Capa:</label>
+                <input type="file" class="form-control" id="recipient-name" name="ftCapa">
+              </div>
+              <div class="mb-3">
+                <button class="btn btn-primary" type="submit" action="CadastroProduto.php">Editar</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
