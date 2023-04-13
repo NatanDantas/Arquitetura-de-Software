@@ -24,7 +24,8 @@
 
   #PesquisaInicio{
     padding: 20px;
-    width: 500px;
+    padding-right: 20%;
+    padding-left: 20%;
   }
 
   form button[type="submit"] {
@@ -42,5 +43,9 @@
   /* Estilo do botão de envio do formulário ao passar o mouse */
   form button[type="submit"]:hover {
     background-color: #2F6C82;
+  }
+
+  #cardsProd{
+    padding: 50px;
   }
 
