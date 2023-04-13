@@ -26,7 +26,7 @@ if ($resultado->num_rows > 0) {
         echo "<td>$descricao</td>";
         echo "<td>$preco</td>";
         echo "<td>$quantidade</td>";
-        echo "<td><a href='alterarUsuario.php?id=$id'>Alterar</a></td>";
+        echo "<td><button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-whatever='$id'>Alterar</button></td>";
         echo "</tr>";
     }
 } else {

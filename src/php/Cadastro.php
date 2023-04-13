@@ -1,4 +1,3 @@
-°
 <?php
 
 session_start();
@@ -8,7 +7,7 @@ $Cpf = mysqli_real_escape_string($mysqli, $_POST['Cpf']);
 $Email = mysqli_real_escape_string($mysqli, $_POST['Email']);
 $Senha = mysqli_real_escape_string($mysqli, trim(md5($_POST['Senha'])));
 $Status = true;
-$Permissao = "Padrao";
+$Permissao = mysqli_real_escape_string($mysqli, $_POST['cargo']);
 
 function validar_cpf($cpf)
 {

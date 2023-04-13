@@ -32,7 +32,7 @@ if ($mysqli->query($sql) === TRUE) {
 $mysqli->close();
 
 function salvarFtperfil($file){
-	$fotoDir = "img/";
+	$fotoDir = "../imagens/ftCapa/";
 	$fotoPath = $fotoDir.basename($file["ftCapa"]["name"]);
 	$fotoTmp = $file["ftCapa"]["tmp_name"];
 	if(move_uploaded_file($fotoTmp, $fotoPath)){

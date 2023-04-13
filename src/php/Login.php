@@ -23,7 +23,7 @@ if($row == 1) {
 	 $_SESSION['permissao'] = $usuario['permissao'];
 	 if($usuario['permissao']=="Admin")
 		 header('Location: ../telas/HomeAdmin.php');
-	if($usuario['permissao'] == "Padrao")
+	if($usuario['permissao'] == "Estoquista")
 	 	header('Location: ../telas/Home.html');
 	 exit();
 } else {
