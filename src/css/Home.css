@@ -1,0 +1,46 @@
+/*HEADER*/
+
+  /*Body*/
+
+  body {
+    font-family: 'Poppins';
+  }
+
+  .container {
+    width: 100%;
+    float: center;
+    margin: 20px;
+  }
+
+  .imagem {
+    padding: 10px;
+    width: 200px;
+  }
+
+  .container .form{
+    padding: 10px;
+    width: 20px;
+  }
+
+  #PesquisaInicio{
+    padding: 20px;
+    width: 500px;
+  }
+
+  form button[type="submit"] {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    width: 25%;
+    margin: 10px;
+    margin-left: 40%;
+  }
+  
+  /* Estilo do botão de envio do formulário ao passar o mouse */
+  form button[type="submit"]:hover {
+    background-color: #2F6C82;
+  }
+
