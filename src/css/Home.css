@@ -1,9 +1,10 @@
-/*HEADER*/
-
   /*Body*/
 
   body {
     font-family: 'Poppins';
+  }
+  ul li{
+    color: #000000;
   }
 
   .container {
@@ -22,11 +23,14 @@
     width: 20px;
   }
 
-  #PesquisaInicio{
-    padding: 20px;
-    padding-right: 20%;
-    padding-left: 20%;
+  #PesquisaHeader{
+    padding:20px;
   }
+  .card-body{
+    border-radius: 0%;
+  }
+
+
 
   form button[type="submit"] {
     background-color: #000000;
