@@ -24,7 +24,7 @@ if ($resultado->num_rows > 0) {
         echo "<td>$email</td>";
         echo "<td>$status</td>";
         echo "<td>$grupo</td>";
-        echo "<td><a href='alterarUsuario.php?id=$id'>Alterar</a></td>";
+        echo "<td><button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-whatever='$id'>Alterar</button></td>";
         if ($status) {
             echo "<td><a href='inativarUsuario.php?id=$id'>Inativar</a></td>";
         } else {

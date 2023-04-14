@@ -28,10 +28,11 @@ if ($resultado->num_rows > 0) {
         echo "<td>$quantidade</td>";
         echo "<td><button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-whatever='$id'>Alterar</button></td>";
         echo "</tr>";
+
+        $idProduto = $id;
     }
 } else {
     echo "<tr><td colspan='5'>Nenhum usuário encontrado.</td></tr>";
 }
 
-$mysqli->close();
 ?>
