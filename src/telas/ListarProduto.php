@@ -16,7 +16,7 @@
   <header class="header">
     <div class="content">
 
-      <a href="Home.html" target="_blank" class="logo"><img id="logo" src="../imagens/Logo.png" class="imagem"></a>
+      <a href="Home.php" target="_blank" class="logo"><img id="logo" src="../imagens/Logo.png" class="imagem"></a>
 
       <input class="mobile-btn" type="checkbox" id="mobile-btn" />
       <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
@@ -61,7 +61,7 @@
         </tbody>
       </table>
     </div>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Editar</button>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">

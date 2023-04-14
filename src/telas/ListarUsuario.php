@@ -17,13 +17,13 @@
   <header class="header">
     <div class="content">
 
-      <a href="Home.html" target="_blank" class="logo"><img id="logo" src="../imagens/Logo.png" class="imagem"></a>
+      <a href="Home.php" target="_blank" class="logo"><img id="logo" src="../imagens/Logo.png" class="imagem"></a>
 
       <input class="mobile-btn" type="checkbox" id="mobile-btn" />
       <label class="mobile-icon" for="mobile-btn"><span class="hamburguer"></span></label>
 
       <ul class="nav">
-        <li><a href="Home.html" title="Home">Home</a></li>
+        <li><a href="Home.php" title="Home">Home</a></li>
         <li><a href="ListarUsuario.php" title="Usuário">Usuários</a></li>
         <li><a href="ListarProduto.php" title="Produtos">Produtos</a></li>
       </ul>
