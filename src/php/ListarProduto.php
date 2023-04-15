@@ -10,7 +10,7 @@ if(isset($_POST['filtrar'])) {
 }
 
 $resultado = $mysqli->query($sql);
-
+$idProduto = 0;
 if ($resultado->num_rows > 0) {
     while ($linha = $resultado->fetch_assoc()) {
         $ftCapa = $linha['ftCapa'];
@@ -26,13 +26,13 @@ if ($resultado->num_rows > 0) {
         echo "<td>$descricao</td>";
         echo "<td>$preco</td>";
         echo "<td>$quantidade</td>";
-        echo "<td><button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-whatever='$id'>Alterar</button></td>";
+        echo "<td><button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-whatever='$id' > Alterar </button></td>";
         echo "</tr>";
-
-        $idProduto = $id;
+        $idProduto = $id; 
     }
 } else {
     echo "<tr><td colspan='5'>Nenhum usuário encontrado.</td></tr>";
 }
+
 
 ?>

@@ -1,3 +1,8 @@
+<?php
+  include("../php/Conexao.php");
+  $sql_code = "SELECT * FROM Produto";
+  $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+?>
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -6,8 +11,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NOME LOJA</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/Home.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -58,52 +61,25 @@
     <li><a href="#" class="nav-link px-2">Promoções</a></li>
     <li><a href="#" class="nav-link px-2">Sobre nós</a></li>
   </ul>
-
-  <div class="row row-cols-1 row-cols-md-3 g-4" id="cardsProd">
-    <div class="col">
-      <div class="card h-100">
-        <img src="../imagens/slide1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Nome Produto</h5>
-          <p class="card-text">Descrição</p>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-cart4"
-              viewBox="0 0 17 17">
-              <path
-                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-            </svg>
-            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> Comprar</button>
-        </div>
-      </div>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <?php if ($sql_query->num_rows > 0): ?>
+          <?php while ($produto = $sql_query->fetch_assoc()): ?>
+              <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img src="<?= $produto['ftCapa'] ?>" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"><?= $produto['nmProduto'] ?></h5>
+                    <p class="card-text"><?= $produto['descricao'] ?></p>
+                    <p class="card-text"><?= $produto['preco'] ?></p>
+                    <a href="InfoProduto.php?id=<?= $produto['id_produto'] ?>" class="btn btn-primary">Ver Mais</a>
+                  </div>
+                </div>
+              </div>
+          <?php endwhile ?>
+        <?php endif ?> 
     </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="../imagens/slide2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">Nome Produto</h4>
-          <p class="card-text">Descrição</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-body-secondary">Last updated 3 mins ago</small>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="../imagens/slide3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h3 class="card-title">Nome Produto</h3>
-          <p class="card-text">Descrição</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-body-secondary">Last updated 3 mins ago</small>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  </div>      
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">

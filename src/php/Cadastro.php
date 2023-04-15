@@ -5,7 +5,7 @@ include("conexao.php");
 $nome = mysqli_real_escape_string($mysqli, $_POST['nome']);
 $Cpf = mysqli_real_escape_string($mysqli, $_POST['Cpf']);
 $Email = mysqli_real_escape_string($mysqli, $_POST['Email']);
-$Senha = mysqli_real_escape_string($mysqli, trim(md5($_POST['Senha'])));
+$Senha = mysqli_real_escape_string($mysqli, ($_POST['Senha']));
 $Status = true;
 $Permissao = mysqli_real_escape_string($mysqli, $_POST['cargo']);
 
@@ -59,7 +59,7 @@ if (!validar_cpf($Cpf)) {
 	exit;
 }
 
-$confirmSenha = mysqli_real_escape_string($mysqli, trim(md5($_POST['ConfirmSenha'])));
+$confirmSenha = mysqli_real_escape_string($mysqli, trim(($_POST['ConfirmarSenha'])));
 if ($Senha !== $confirmSenha) {
   $_SESSION['senha_nao_confere'] = true;
   header('Location: ../telas/Cadastro.html');
