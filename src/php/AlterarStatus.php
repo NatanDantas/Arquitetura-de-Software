@@ -3,8 +3,8 @@ session_start();
 include("conexao.php");
 
 // recupera o id do usuário a ser alterado e a ação (ativar ou inativar)
-$id = mysqli_real_escape_string($mysqli, $_POST['id']);
-$acao = mysqli_real_escape_string($mysqli, $_POST['acao']);
+$id = $_GET['id'];
+$acao = $_GET['acao'];
 
 // verifica se a ação é válida
 if ($acao != 'Ativar' && $acao != 'Inativar') {
@@ -13,7 +13,7 @@ if ($acao != 'Ativar' && $acao != 'Inativar') {
 }
 
 // busca o usuário no banco de dados
-$sql = "SELECT * FROM Usuario WHERE idUsuario = '$id'";
+$sql = "SELECT * FROM Usuario WHERE id_usuario = '$id'";
 $result = $mysqli->query($sql);
 $row = mysqli_fetch_assoc($result);
 
@@ -25,12 +25,12 @@ if (!$row) {
 
 // atualiza o status do usuário
 $status = ($acao == 'Ativar') ? 1 : 0;
-$sql = "UPDATE Usuario SET statusUsuario = '$status' WHERE idUsuario = '$id'";
+$sql = "UPDATE Usuario SET statusUsuario = '$status' WHERE id_usuario = '$id'";
 
 if ($mysqli->query($sql) === TRUE) {
 	// exibe mensagem de confirmação e redireciona para a página de listagem de usuários
 	$_SESSION['msg_confirmacao'] = "Usuário ".$row['nmUsuario']." ".strtolower($acao)." com sucesso.";
-	header('Location: listar_usuarios.php');
+	header('Location: ../telas/ListarUsuario.php');
 	exit;
 } else {
 	echo $mysqli->error;

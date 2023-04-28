@@ -26,7 +26,8 @@ if ($resultado->num_rows > 0) {
         echo "<td>$descricao</td>";
         echo "<td>$preco</td>";
         echo "<td>$quantidade</td>";
-        echo "<td><button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-whatever='$id' > Alterar </button></td>";
+        echo "<td><a class='btn btn-primary' href='../telas/AlterarProduto.php?id=$id' > Alterar </a></td>";
+        echo "<td><a class='btn btn-primary' href='../telas/InfoProduto.php?id=$id' > Detalhes </a></td>";
         echo "</tr>";
         $idProduto = $id; 
     }

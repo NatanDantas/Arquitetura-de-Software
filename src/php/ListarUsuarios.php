@@ -22,13 +22,17 @@ if ($resultado->num_rows > 0) {
         echo "<tr>";
         echo "<td>$nome</td>";
         echo "<td>$email</td>";
-        echo "<td>$status</td>";
-        echo "<td>$grupo</td>";
-        echo "<td><button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-whatever='$id'>Alterar</button></td>";
         if ($status) {
-            echo "<td><a href='inativarUsuario.php?id=$id'>Inativar</a></td>";
+            echo "<td>Ativo</td>";
         } else {
-            echo "<td><a href='reativarUsuario.php?id=$id'>Reativar</a></td>";
+            echo "<td>Inativo</td>";
+        }
+        echo "<td>$grupo</td>";
+        echo "<td><a class='btn btn-primary' href='../telas/AlterarUsuario.php?id=$id' > Alterar </a></td>";
+        if ($status) {
+            echo "<td><a class='btn btn-danger' href='../php/AlterarStatus.php?id=$id&acao=Inativar'>Inativar</a></td>";
+        } else {
+            echo "<td><a class='btn btn-danger' href='../php/AlterarStatus.php?id=$id&acao=Ativar'>Reativar</a></td>";
         }
         echo "</tr>";
     }

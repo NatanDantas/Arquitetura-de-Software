@@ -49,65 +49,21 @@
       <table>
         <thead>
           <tr>
-            <th>Código</th>
+            <th>Foto</th>
             <th>Nome</th>
+            <th>Descricao</th>
+            <th>Preço</th>
             <th>Quantidade</th>
-            <th>Valor</th>
-            <th>Editar</th>
+            <th> </th>
+            <th> </th>
           </tr>
         </thead>
         <tbody>
           <?php include("../php/ListarProduto.php"); ?>
         </tbody>
       </table>
-    </div>
-    <?php
-      $consulta = "SELECT * FROM Produto where id_produto = $idProduto";
-      $con = $mysqli->query($consulta) or die($mysqli->error);
-      while ($dados = $con->fetch_array()) {
-    ?>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Produto</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form method="post" action="../php/AlterarProduto.php" enctype="multipart/form-data">
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Nome Produto:</label>
-                <input type="text" class="form-control" id="recipient-name" name="nmProduto" value="<?php echo $dados["nmProduto"] ?>">
-              </div>
-              <div class="mb-3">
-                <label for="message-text" class="col-form-label">Descricao:</label>
-                <textarea class="form-control" id="message-text" name="descricao" value="<?php echo $dados["descricao"] ?>"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Preço:</label>
-                <input type="text" class="form-control" id="recipient-name" name="preco" value="<?php echo $dados["preco"] ?>">
-              </div>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Quantidade:</label>
-                <input type="text" class="form-control" id="recipient-name" name="quantidade" value="<?php echo $dados["quantidade"] ?>">
-              </div>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Foto de Capa:</label>
-                <input type="file" class="form-control" id="recipient-name" name="ftCapa" value="<?php echo $dados["ftCapa"] ?>">
-              </div>
-              <div class="mb-3">
-                <button class="btn btn-primary" type="submit" action="CadastroProduto.php">Editar</button>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <?php }
-      $_SESSION['idProduto'] = $idProduto; 
+    </div> 
+    <?php 
       $mysqli->close();
     ?>
   </div>
