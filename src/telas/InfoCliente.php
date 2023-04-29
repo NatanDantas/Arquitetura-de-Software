@@ -3,6 +3,7 @@
   session_start();
   $logado = $_SESSION['Logado'];
   $nome = $_SESSION['nmCliente'];
+  $idCliente = $_SESSION['idCliente'];
   $hidden = "";
   $hiddenUser = "";
   if($logado){
@@ -10,7 +11,7 @@
   }else{
     $hiddenUser = "visually-hidden";
   }
-  $sql_code = "SELECT * FROM Produto";
+  $sql_code = "SELECT * FROM Cliente where id_cliente = $idCliente";
   $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 ?>
 <!DOCTYPE html>
@@ -50,11 +51,9 @@
 
       </form>
 
-
       <div class="col-md-3 text-end">
         <div class="<?php echo $hiddenUser ?>">
           <p class="text-dark me-3">Olá, <?php echo $nome ?></p>
-          <a href="InfoCliente.php" type="button" >ver detalhe</a>
         </div>
         <a href="LoginCliente.php" type="button" class="btn btn-outline-primary me-2 <?php echo ($hidden) ?>">Login</a>
         <a href="LoginCliente.php" class="btn btn-primary">
@@ -67,33 +66,18 @@
       </div>
     </header>
   </div>
-
-  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-    <li><a href="#" class="nav-link px-2">Coleção</a></li>
-    <li><a href="#" class="nav-link px-2">Lançamentos</a></li>
-    <li><a href="#" class="nav-link px-2">Promoções</a></li>
-    <li><a href="#" class="nav-link px-2">Sobre nós</a></li>
-  </ul>
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <?php if ($sql_query->num_rows > 0): ?>
-          <?php while ($produto = $sql_query->fetch_assoc()): ?>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <img src="<?= $produto['ftCapa'] ?>" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title"><?= $produto['nmProduto'] ?></h5>
-                    <p class="card-text"><?= $produto['descricao'] ?></p>
-                    <p class="card-text"><?= $produto['preco'] ?></p>
-                    <a href="InfoProduto.php?id=<?= $produto['id_produto'] ?>" class="btn btn-primary">Ver Mais</a>
-                  </div>
-                </div>
-              </div>
-          <?php endwhile ?>
+    <div>
+        <?php if ($sql_query->num_rows > 0): ?>
+            <?php while ($cliente = $sql_query->fetch_assoc()): ?>
+                <label for="recipient-name" class="col-form-label"><?php $cliente['nmCliente'] ?></label>
+                <label for="recipient-name" class="col-form-label"><?php $cliente['cpf'] ?></label>
+                <label for="recipient-name" class="col-form-label"><?php $cliente['email'] ?></label>
+                <label for="recipient-name" class="col-form-label"><?php $cliente['dtNacimento'] ?></label>
+                <label for="recipient-name" class="col-form-label"><?php $cliente['genero'] ?></label>
+            <?php endwhile ?>
         <?php endif ?> 
     </div>
-  </div>      
+  
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
