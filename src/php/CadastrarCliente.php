@@ -9,6 +9,8 @@ $Senha = mysqli_real_escape_string($mysqli, ($_POST['Senha']));
 $Data = mysqli_real_escape_string($mysqli, ($_POST['data']));
 $Genero = mysqli_real_escape_string($mysqli, $_POST['genero']);
 
+// ta faltando os endereços
+
 if($Genero == "Masculino"){
   $Genero = 'M';
 }else if($Genero == "Feminino"){

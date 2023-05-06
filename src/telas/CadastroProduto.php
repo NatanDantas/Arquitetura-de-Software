@@ -5,7 +5,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"> 
     </head>
+
     <body>
+
         <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
           <div class="container-fluid">
             <a class="navbar-brand" href="HomeAdmin.php">Dashboard</a>
@@ -19,6 +21,7 @@
             </div>
           </div>
         </nav>
+
         <div class="container">
           <form method="post" action="../php/CadastroProduto.php"  enctype="multipart/form-data">
               <label for="nome">Nome do Produto</label>
@@ -41,14 +44,15 @@
                   placeholder=""
                 />
               </div>
-              <label for="nome">Preco</label>
+              <label for="nome">Preço</label>
               <div class="form-floating mb-3">
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
                   id="preco"
                   name="preco"
                   placeholder=""
+                  step="0.01" required
                 />
               </div>
               <label for="nome">Quantidade</label>

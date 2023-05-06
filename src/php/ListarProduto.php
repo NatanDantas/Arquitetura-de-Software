@@ -13,6 +13,7 @@ $resultado = $mysqli->query($sql);
 $idProduto = 0;
 if ($resultado->num_rows > 0) {
     while ($linha = $resultado->fetch_assoc()) {
+        //Aqui preciso que cadastre mais de uma imagem para dicionar o carrossel
         $ftCapa = $linha['ftCapa'];
         $id = $linha['id_produto'];
         $nome = $linha['nmProduto'];

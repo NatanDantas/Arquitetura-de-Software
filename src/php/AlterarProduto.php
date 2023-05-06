@@ -4,6 +4,7 @@ session_start();
 include("conexao.php");
 $idProduto = $_SESSION['idProduto'];
 
+//Aqui preciso que cadastre mais de uma imagem para dicionar o carrossel
 
 $nmProduto= $_POST['nmProduto'];
 $descricao= $_POST['descricao'];

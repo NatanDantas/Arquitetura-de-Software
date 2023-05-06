@@ -17,7 +17,7 @@ if(gettype($upload) == "string"){
 	$File = false;
 	echo($upload);
 }
-
+// o Preço ta bugado, nao tem como colocar virgula
 $sql = "INSERT INTO Produto(nmProduto, descricao, preco, quantidade, ftCapa)
         VALUES( '$nomeProduto', '$descricao', '$preco','$quantidade','$File')";
 
