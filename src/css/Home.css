@@ -1,55 +1,153 @@
-  /*Body*/
+.container {
+  width: 100%;
+  font-family: 'Poppins';
+}
 
-  body {
-    font-family: 'Poppins';
-  }
-  ul li{
-    color: #000000;
-  }
+.imagem {
+  padding: 10px;
+  width: 200px;
+  position: relative;
+  left: 10%;
+}
 
-  .container {
-    width: 100%;
-    float: center;
-    margin: 20px;
-  }
+.card-body {
+  position: relative;
+ border-color: #000000;
+}
 
-  .imagem {
-    padding: 10px;
-    width: 200px;
-  }
+.col{
+  border: 10px #000000;
+  border-radius: 0%;
+  position: static;
+width: 300px;
 
-  .container .form{
-    padding: 10px;
-    width: 20px;
-  }
+}
 
-  #PesquisaHeader{
-    padding:20px;
-  }
-  .card-body{
-    border-radius: 0%;
-  }
+.card-img-top{
+  position: static;
+
+}
+
+#home{
+  background-color: #1D5C96;
+}
+
+#footer{
+  background-color: #ffffff;
+  margin-top: 10%;
+}
+
+#headerHome{
+  background-color: #ffffff;
+  position: relative;
+}
+
+#btnCarrinho{
+margin: 5%;
+
+}
+
+#PesquisaInput {
+  justify-content: center;
+  align-content: center;
+  border-radius: 5px;
+  font-size: 18px;
+  position: relative;
+  width: 50%;
+  left: 25%;
+}
+
+#PesquisaButton {
+  justify-content: center;
+  align-content: center;
+  border-radius: 5px;
+  font-size: 18px;
+  position: relative;
+  width: 50px;
+  right: 20%;
+}
+
+#btnVerMais{
+  cursor: pointer;
+  border: none;
+  display: none;
+  color: #ffffff;
+  background-color: #000000;
+  width: 50%;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  left: 25%;
+}
+
+#btnComprar{
+  position: absolute;
+  top: 25; 
+  right: 10; 
+  align-items: center; 
+  justify-content: center;
+
+}
+.col:hover #btnVerMais {
+  display: block;
+}
+
+.col:hover #btnVerMais   {
+  opacity: 1;
+}
+
+#pesquisaForm {
+  display: flex;
+  padding: 20px;
+  margin-bottom: 5%;
+}
 
 
+#cardsItem {
+  border: #000000;
+}
 
-  form button[type="submit"] {
-    background-color: #000000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 12px;
-    cursor: pointer;
-    width: 25%;
-    margin: 10px;
-    margin-left: 40%;
-  }
+
+/*Body*/
+body {
+  font-family: 'Poppins';
+}
+#navHome{
+  font-size: 15px;
   
-  /* Estilo do botão de envio do formulário ao passar o mouse */
-  form button[type="submit"]:hover {
-    background-color: #2F6C82;
-  }
+}
+ul li {
+  color: #000000;
+}
 
-  #cardsProd{
-    padding: 50px;
-  }
+form button[type="submit"] {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  width: 25%;
+  margin: 10px;
+  margin-left: 40%;
+}
 
+/* Estilo do botão de envio do formulário ao passar o mouse */
+form button[type="submit"]:hover {
+  background-color: #1D5C96;
+}
+h1{
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15%;
+}
+
+a{
+  color: #1D5C96;
+ font-size: 20px;
+  font-style: bold;
+
+
+}

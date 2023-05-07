@@ -10,7 +10,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOME LOJA</title>
+  <title>Login Cliente</title>
   <link rel="stylesheet" href="../css/Home.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -71,7 +71,6 @@
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
       <li class="ms-3"><a class="text-body-secondary" href="#">Natan</a></li>
       <li class="ms-3"><a class="text-body-secondary" href="#">Bruno</a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#">Ricardo</a></li>
       <li class="ms-3"><a class="text-body-secondary" href="#">Iago</a></li>
       </ul>
   </footer>

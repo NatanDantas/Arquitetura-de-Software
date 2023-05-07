@@ -22,11 +22,11 @@ if($row == 1) {
         $_SESSION['nmCliente'] = $cliente['nmCliente'];
         $_SESSION['idCliente'] = $cliente['id_cliente'];
         $_SESSION['Logado'] = true;
-        //header('Location: ../telas/Home.php');
+        header('Location: ../telas/Home.php');
         exit();
 } else {
 	$_SESSION['nao_autenticado'] = true;
-	//header('Location: ../telas/LoginCliente.php?err=true');
+	header('Location: ../telas/LoginCliente.php?err=true');
 	exit();
 }
 
