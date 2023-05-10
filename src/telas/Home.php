@@ -101,32 +101,23 @@ $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
             <div class="col" style="backgroundColor: #000000">
               <div class="card">
 
-
                 <a href="carrinho" id="btnComprar">
                   <i class="fa-sharp fa-solid fa-money-bill-wave fa-xl" style="color: #006400;"></i>
                 </a>
                 <img src="<?= $produto['ftCapa'] ?>" class="card-img-top" alt="...">
-                
-
-
 
                 <div class="card-body">
                   <h3 class="card-title">
                     <?= $produto['nmProduto'] ?>
                   </h3>
 
-
-
                   <p class="card-text">R$
                     <?= $produto['preco'] ?>
                   </p>
 
-
-
                   <a href="InfoProduto.php?id=<?= $produto['id_produto'] ?>" class="btn btn-primary" id="btnVerMais">Ver
                     Mais
                   </a>
-
 
                 </div>
 
