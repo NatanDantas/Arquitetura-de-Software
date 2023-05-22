@@ -33,7 +33,7 @@
         </div>
       </div>
     </nav>
-    <form method="POST" action="../php/Cadastro.php">
+    <form method="POST" action="../php/Cadastro.php" id="formularioCadastro">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6 col-lg-4">
@@ -109,10 +109,58 @@
             </div>
             <!-- Botão de Cadastro -->
             <div class="d-grid">
-              <button class="btn btn-primary" type="submit" action="Cadastro.php">Cadastrar</button>
+              <button class="btn btn-primary" type="submit" action="Cadastro.php" id="btnEnviar">Cadastrar</button>
+            </div>
+
+            <!--Modal para aviso caso erro de cadastro (Ainda não está pronto)-->
+              <div id="modalFalha" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header bg-success text-center">
+                    <h5 class="modal-title" id="visulUsuarioModalLabel">Usuário</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Usuário cadastrado com sucesso!
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
       </div>
     </form> 
+    <!--Script para executar o modal (Ainda não está pronto)-->
+    <script>
+        function exibirModalFalha() {
+          // Obter referência ao modal
+          const modal = document.getElementById("modalFalha");
+
+          // Exibir o modal
+          modal.style.display = "block";
+        }
+
+        // Uso de exemplo:
+        const form = document.getElementById("formularioCadastro");
+        const btnEnviar = document.getElementById("btnEnviar");
+
+        btnEnviar.addEventListener("click", function(event) {
+          // Simulando uma falha no cadastro
+          const cadastroValido = true;
+
+          if (!cadastroValido) {
+            // Evitar o envio do formulário
+            event.preventDefault();
+
+            // Exibir o modal de falha
+            exibirModalFalha();
+          }
+        });
+    </script>
   </body>
 </html>
